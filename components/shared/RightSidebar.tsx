@@ -1,6 +1,10 @@
 function RightSidebar() {
   return (
-    <h1>RightSide bar</h1>
+    <section className="custom-scrollbar rightsidebar">
+      <div className="flex flex-1 flex-col justify-start">
+        <h3 className="">Suggested Communities</h3>
+      </div>
+    </section>
   );
 }
 
