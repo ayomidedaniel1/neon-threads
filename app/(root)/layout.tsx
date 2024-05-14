@@ -9,7 +9,7 @@ import Bottombar from "@/components/shared/Bottombar";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Neon Threads',
   description: 'Neon Next.js 13 Threads Application'
 };
