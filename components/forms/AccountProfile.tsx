@@ -48,7 +48,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
 
     const fileReader = new FileReader();
 
-    if (e.target.files && e.target.files.length > 1) {
+    if (e.target.files && e.target.files.length > 0) {
       const file = e.target.files[0];
 
       setFiles(Array.from(e.target.files));
@@ -79,7 +79,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
       >
         <FormField
           control={form.control}
-          name="username"
+          name="profile_photo"
           render={({ field }) => (
             <FormItem className="flex items-center gap-4">
               <FormLabel className='account-form_image-label cursor-pointer'>
