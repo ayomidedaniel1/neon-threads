@@ -4,24 +4,23 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { UserValidation } from '@/lib/validations/user';
-import * as z from 'zod';
-import Image from "next/image";
-import { ChangeEvent, useState } from "react";
+import { updateUser } from "@/lib/actions/user.actions";
 import { useUploadThing } from '@/lib/uploadthing';
 import { isBase64Image } from '@/lib/utils';
-import { updateUser } from "@/lib/actions/user.actions";
+import { UserValidation } from '@/lib/validations/user';
+import { zodResolver } from '@hookform/resolvers/zod';
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import { ChangeEvent, useState } from "react";
+import { useForm } from 'react-hook-form';
+import * as z from 'zod';
 
 interface Props {
   user: {
@@ -146,6 +145,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   onChange={(e) => handleImage(e, field.onChange)}
                 />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -165,6 +165,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -184,6 +185,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -203,6 +205,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
